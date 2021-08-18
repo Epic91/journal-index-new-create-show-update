@@ -1,2 +1,16 @@
-<h1>Entries#new</h1>
-<p>Find me in app/views/entries/new.html.erb</p>
+<h1>Add a new Journal entry!</h1>
+
+<%= form_tag  entries_path do%>
+    <label>Name:</label><br>
+    <%= text_field_tag :'entry[name]' %><br><br>
+
+    <label>Subject:</label><br>
+    <%= text_field_tag :'entry[subject]' %><br><br>
+    
+    <label>Body:</label><br>
+    <%= text_area_tag :'entry[body]' %><br><br>
+
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <%= submit_tag 'Submit Entry' %>
+
+<% end %>
