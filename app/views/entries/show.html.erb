@@ -1,5 +1,7 @@
 <h1><%= @entry.subject %></h1>
 
 <%= @entry.body %><br><br>
-<em>- <%= @entry.name %></em>
+<em>- <%= @entry.name %></em><br><br>
 
+<%= link_to 'View all your entries', entries_path%> |
+<%= link_to 'Edit entry', edit_entry_path%>
