@@ -1,2 +1,7 @@
-<h1>Entries#index</h1>
-<p>Find me in app/views/entries/index.html.erb</p>
+<h1>All your Journal entries!</h1>
+
+<% @entries.each do |entry| %>
+    <div>
+        <%= link_to entry.name, entry_path(entry)%> | <%= entry.subject %>
+    </div>
+<% end %>
